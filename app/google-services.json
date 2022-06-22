@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "613730104314",
+    "project_id": "twitunab",
+    "storage_bucket": "twitunab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613730104314:android:2f8c38fecf4c37c5d6ea43",
+        "android_client_info": {
+          "package_name": "com.sebastianjoya.twitunab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613730104314-tc0p90i9pmtlq5700jok7n8bgjti92pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sebastianjoya.twitunab",
+            "certificate_hash": "c51b4006ac71fc11fdb940225e51038a4e9c48e5"
+          }
+        },
+        {
+          "client_id": "613730104314-6a0nr4g327h4ekvkjlqih6d4nf8obaa0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_T-aO1LTUc6Dp5cnuWgsbyKrbjrIOrJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613730104314-6a0nr4g327h4ekvkjlqih6d4nf8obaa0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
