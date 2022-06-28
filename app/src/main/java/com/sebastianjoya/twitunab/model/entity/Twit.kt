@@ -9,6 +9,5 @@ class Twit(
     var date: String = "",
     var message: String = "",
     var idUser: String = "",
-    var idStatus: String = ""
 ) {
 }

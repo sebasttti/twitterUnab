@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_camera.xml" value="0.2605" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/activity_publish_twit.xml" value="0.28125" />
-        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_info.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/activity_user_twits.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/activity_users_list.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/twit_detail.xml" value="0.3020833333333333" />
       </map>
     </option>
   </component>

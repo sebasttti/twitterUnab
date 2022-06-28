@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.UserTwitsActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <variable
+            name="adapter"
+            type="com.sebastianjoya.twitunab.view.TwitAdapter" />
+
+        <variable
+            name="viewModel"
+            type="com.sebastianjoya.twitunab.viewmodel.UserTwitsActivityViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.UserTwitsActivity"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="60dp"
+            android:hint="Escribe un nuevo twit"
+            android:text="@={viewModel.newMessage}"
+            android:id="@+id/ed_userTwits_newMessage"
+        />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:id="@+id/bu_twitList_return"
+            app:layout_constraintTop_toBottomOf="@+id/ed_userTwits_newMessage"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="REGRESAR" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:id="@+id/bu_twitList_add"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/ed_userTwits_newMessage"
+            android:text="AGREGAR TWIT" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_twitList_show"
+            android:layout_width="match_parent"
+            android:adapter="@{adapter}"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/bu_twitList_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
