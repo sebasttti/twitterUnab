@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.sebastianjoya.twitunab.R
 import com.sebastianjoya.twitunab.databinding.ActivityUserTwitsBinding
+import com.sebastianjoya.twitunab.model.entity.Twit
 import com.sebastianjoya.twitunab.model.entity.User
 import com.sebastianjoya.twitunab.viewmodel.UserTwitsActivityViewModel
 
@@ -31,17 +32,24 @@ class UserTwitsActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[UserTwitsActivityViewModel::class.java]
 
+        viewModel.user = user!!
+
         adapter = TwitAdapter(arrayListOf())
 
         binding.adapter = adapter
 
         loadData()
 
-
-
     }
 
-    fun loadData(){
-        viewModel.twits
+    override fun onResume() {
+        viewModel.loadData()
+        super.onResume()
+    }
+
+    private fun loadData(){
+        viewModel.twits.observe(this){
+            adapter.refresh(it as ArrayList<Twit>)
+        }
     }
 }
